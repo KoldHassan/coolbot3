@@ -31,7 +31,10 @@ async def karenwisdom(ctx, number: int = 1):
     while i < number:
         response = random.choice(wisdom["Karen"])
         await ctx.send(response)
-        i += 1
+        if i < 4:
+          i +=1
+        elif i == 4:
+          i = number
 
 
 keep_alive.keep_alive()
